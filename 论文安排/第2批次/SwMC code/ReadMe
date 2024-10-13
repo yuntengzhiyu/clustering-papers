@@ -1,0 +1,11 @@
+Some tips to use this package code.
+
+1. To understand the original idea of the proposed algorithm, please use v1, where the convergence is better preserved while the clustering performance may be unsatisfactory. 
+2. Use v2 if you try to obtain a decent clustering result(We did it in our paper). Please note that since some necessary minor changes have been made, the optimization during each iteration will not decrease the object value monotonically.
+3. v3 is developed to make a tradeoff between v1 and v2. It at first sets \lambda to zero and come to coarse weights, and then learns a structured graph by adjusting \lambda.
+4. In each subpackage, we implement a test on X for intuitive observations. You can replace its data, lable vector or even graph construction approach in your own experiment as you want.
+5. Other operations are expected to produce more impressive results which are not included and discussed in our paper, such as randomly initializing the view weights (Note that the problem is not convex), doing normalizations for data, or setting \lambda with a small value instead of zero in v3 (At this condition, you need further modify CLR function). 
+
+Ref:
+F. Nie, J. Li, and X. Li, "Self-weighted Multiview Clustering with Multiple Graphs," in proceedings of International Joint Conference on Artificial Intelligence (IJCAI), 2564-2570, 2017. 
+
